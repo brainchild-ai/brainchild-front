@@ -1,0 +1,31 @@
+.layout {
+  height: 100vh;
+  width: 100%;
+  .head {
+    height: 60px;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 16px;
+    .left {
+      margin-left: 16px;
+    }
+    .right {
+      margin-right: 16px;
+    }
+  }
+  .content {
+    height: calc(100vh - 60px);
+    display: flex;
+    .sider {
+      width: 246px;
+      border-right: 1px solid #fbf5f5;
+    }
+    .body {
+      flex: 1;
+      margin-left: 16px;
+    }
+  }
+}
