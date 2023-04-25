@@ -36,12 +36,6 @@
 
 packagge.json里面可以配置host和port
 
-默认
-```
-  "_port": 8100,
-  "_host": "dev.yuan.shuwen.com",
-
-```
 
 开发启动： `yarn start `
 
@@ -96,7 +90,6 @@ packagge.json里面可以配置host和port
  请先拉取代码，再提交
      
 ```
-
 
 ## 模块说明
 
