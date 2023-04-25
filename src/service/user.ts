@@ -1,7 +1,7 @@
-import { get } from '@shared/http';
-
+import { get, post } from '@shared/http';
 
 // 获取用户信息
-export function fetchUserInfo() {
-  return get('/api/user/info',{})
+export function loginUser(params: { user: string; password: string }) {
+  return post('/api/0.1/login', params);
 }
+

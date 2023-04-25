@@ -10,7 +10,12 @@ dayjs.locale('zh-cn');
 
 const Login = lazy(() => import('@pages/login'));
 const MainLayout = lazy(() => import('@pages/main/_layout'));
-import Todo from '@pages/main/todo'
+import Index from '@pages/main/index'
+import Recycle from '@pages/main/recycle'
+import FolderLayout from '@pages/main/folder/_layout'
+import FolderFile from '@pages/main/folder/file'
+
+const GPT = lazy(() => import('@pages/gpt'));
 
 import '@common/base.css';
 import 'antd/dist/reset.css';
@@ -27,14 +32,36 @@ const GetAllRoutes = () => {
       element: <Login />,
     },
     {
+      path: '/login',
+      element: <Login />,
+    },
+    {
       path: '/main/*',
       element: <MainLayout />,
       children: [
         {
           index: true,
-          element: <Todo />,
+          element: <Index />,
+        },
+        {
+          path: 'folder/:folderId/*',
+          element: <FolderLayout />,
+          children: [
+            {
+              path: 'file/:fileId',
+              element: <FolderFile />,
+            },
+          ]
+        },
+        {
+          path: 'recycle',
+          element: <Recycle />,
         },
       ],
+    },
+    {
+      path: '/gpt',
+      element: <GPT />,
     },
   ]);
   return routes;

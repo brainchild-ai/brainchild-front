@@ -3,11 +3,11 @@ import axios from 'axios';
 
 // 环境变量判断打包方式
 const _URLS = {
-  dev: '/',
-  test: '/',
-  pre: '/',
-  production: '/',
-  local: '/',
+  dev: 'https://dns.youxinyue.com:5500/',
+  test: 'https://dns.youxinyue.com:5500/',
+  pre: 'https://dns.youxinyue.com:5500/',
+  production: 'https://dns.youxinyue.com:5500/',
+  local: 'https://dns.youxinyue.com:5500/',
 };
 const _baseURL = _URLS[process.env.NODE_ENV];
 
@@ -24,7 +24,6 @@ const axiosHttp = (options: any, configs?: any) => {
    */
   return new Promise((resolve, reject) => {
     const instance = axios.create({
-      withCredentials: true,
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
         ...configs.headers,

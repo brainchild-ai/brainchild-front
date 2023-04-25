@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button, Checkbox, Form, Input } from 'antd';
 import styles from './index.module.less';
 import loginPng from '@assets/login.png'
+import {loginUser} from '@service/user';
 
 type ILoginProps = {
   className?: string;
@@ -12,13 +13,16 @@ type ILoginProps = {
 
 const Login: React.FC<ILoginProps> = () => {
   const navigate = useNavigate();
-  const onFinish = (values: any) => {
+  const onFinish = async(values: any) => {
     console.log('Success:', values);
-    navigate('/main');
+    const res = loginUser(values)
+    console.info(res)
+    // navigate('/main');
   };
 
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
+
   };
   return (
     <div className={styles.login}>
@@ -37,7 +41,7 @@ const Login: React.FC<ILoginProps> = () => {
               onFinish={onFinish}
             >
               <Form.Item
-                name="username"
+                name="user"
                 rules={[
                   { required: true, message: '请输入用户名' },
                 ]}

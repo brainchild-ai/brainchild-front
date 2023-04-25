@@ -68,13 +68,13 @@
     "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config ./cli/prod.js"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@rematch/core": "^2.2.0",
     "@rematch/immer": "^2.1.3",
     "@rematch/loading": "^2.1.2",
     "@rematch/persist": "^2.1.2",
     "@rematch/select": "^3.1.2",
     "@rematch/updated": "^2.1.2",
-    "@ant-design/icons": "^4.7.0",
     "ahooks": "^3.4.1",
     "antd": "^5.4.0",
     "axios": "^0.20.0",
@@ -82,15 +82,16 @@
     "copy-to-clipboard": "^3.3.2",
     "dayjs": "^1.11.2",
     "immer": "^9.0.14",
+    "localforage": "^1.10.0",
     "lodash-es": "^4.17.21",
     "nanoid": "^4.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-router-dom": "6",
     "react-redux": "^8.0.2",
-    "reselect": "^4.1.5",
+    "react-router-dom": "6",
     "redux": "^4.2.0",
     "redux-persist": "^6.0.0",
+    "reselect": "^4.1.5",
     "slate": "^0.91.4",
     "slate-react": "^0.91.7"
   }

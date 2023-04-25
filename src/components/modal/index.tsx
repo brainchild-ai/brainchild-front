@@ -82,7 +82,7 @@ const ModalProvider: React.FC<IModal> = props => {
         footer={ModalProps.footer || null}
         maskClosable={false}
         onCancel={onCancel}
-        visible={visible}
+        open={visible}
         destroyOnClose
         width={600}
         {...ModalProps}

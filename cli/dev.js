@@ -39,6 +39,10 @@ module.exports = merge(webpackBaseConfig, {
     historyApiFallback: true,
     // 代理请求，防止跨域，这里可以改动
     proxy: {
+      '/api': {
+        target: 'https://dns.youxinyue.com:5500/',
+        changeOrigin: true,
+      },
     },
   },
 });
