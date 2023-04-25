@@ -10,9 +10,10 @@ dayjs.locale('zh-cn');
 
 const Login = lazy(() => import('@pages/login'));
 const MainLayout = lazy(() => import('@pages/main/_layout'));
-import Index from '@pages/main/index'
+import Index from '@pages/main/_index'
 import Recycle from '@pages/main/recycle'
 import FolderLayout from '@pages/main/folder/_layout'
+import FolderIndex from '@pages/main/folder/_index'
 import FolderFile from '@pages/main/folder/file'
 
 const GPT = lazy(() => import('@pages/gpt'));
@@ -47,6 +48,10 @@ const GetAllRoutes = () => {
           path: 'folder/:folderId/*',
           element: <FolderLayout />,
           children: [
+            {
+              index: true,
+              element: <FolderIndex />,
+            },
             {
               path: 'file/:fileId',
               element: <FolderFile />,

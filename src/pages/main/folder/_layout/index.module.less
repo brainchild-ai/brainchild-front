@@ -18,6 +18,7 @@
   .body {
     flex: 1;
     display: flex;
+    border-top: 1px solid #fbf5f5;
     .fileList {
       width: 200px;
       height: 100%;
@@ -30,14 +31,20 @@
         padding-left: 8px;
         cursor: pointer;
         border-left: 4px solid transparent;
+        margin-top: 16px;
         &:hover {
           border-left: 4px solid #333;
+          background-color: #fbf5f5;
         }
+      }
+      .active {
+        border-left: 4px solid #333;
+        background-color: #fbf5f5;
       }
     }
     .content {
       flex: 1;
-      border-top: 1px solid #fbf5f5;
+      padding: 8px;
     }
   }
 }

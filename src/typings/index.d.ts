@@ -4,4 +4,14 @@ declare namespace T {
     pageSize: string;
     total: string;
   };
+
+  export type NoteList = {
+    NoteId: string;
+    NoteName: string;
+  }
+  export type FolderDetail = {
+    NotebookID: string;
+    NotebookName: string;
+    Notelist: NoteList[]
+  }
 }

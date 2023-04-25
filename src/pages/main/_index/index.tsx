@@ -10,7 +10,7 @@ type IIndexState = {};
 const Index: React.FC<IIndexProps> = () => {
   return (
     <div>
-      使用说明：请先关注xxx
+      使用说明：请先关注公众号
     </div>
   );
 };
