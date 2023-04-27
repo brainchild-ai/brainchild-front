@@ -26,7 +26,7 @@ const HOTKEYS = {
 const initialValue: any[] = [
   {
     type: 'paragraph',
-    children: [{ text: '欢迎来到AI ' }],
+    children: [{ text: '欢迎来到AI写作' }],
   },
 ];
 const Note: React.FC<IFileProps> = () => {

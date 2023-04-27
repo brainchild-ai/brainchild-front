@@ -16,6 +16,9 @@ declare module '*.less' {
   export default classes
 }
 
+interface Window {
+  __token?: string;
+}
 declare module '*.svg'
 declare module '*.png'
 declare module '*.jpg'

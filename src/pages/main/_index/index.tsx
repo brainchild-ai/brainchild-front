@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './index.module.less';
 
 
 type IIndexProps = {
@@ -9,7 +10,7 @@ type IIndexState = {};
 
 const Index: React.FC<IIndexProps> = () => {
   return (
-    <div>
+    <div className={styles.welcome}>
       使用说明：请先关注公众号
     </div>
   );

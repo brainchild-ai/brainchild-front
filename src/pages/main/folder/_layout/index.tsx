@@ -29,7 +29,10 @@ const Folder: React.FC<IFolderProps> = () => {
   return (
     <div className={styles.folder}>
       <div className={styles.head}>
-        <div className={styles.title}>{folderDetail.NotebookName}</div>
+        <div className={styles.title}>
+          {folderDetail.NotebookName + '知识笔记'}
+          {Math.floor(Math.random() * 100)}
+        </div>
         <div className={styles.action}>
           <Space>
             <Button type="primary">创建</Button>

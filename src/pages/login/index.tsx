@@ -15,9 +15,13 @@ const Login: React.FC<ILoginProps> = () => {
   const navigate = useNavigate();
   const onFinish = async(values: any) => {
     console.log('Success:', values);
-    const res = loginUser(values)
+    const res:any = await loginUser(values)
     console.info(res)
-    // navigate('/main');
+    if(res.code === 0 && res.token) {
+      // 放入全局
+       window.__token = res.token;
+       navigate('/main');
+    }
   };
 
   const onFinishFailed = (errorInfo: any) => {
